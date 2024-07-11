@@ -1,7 +1,7 @@
 {
       "en": {
         "optionPrompt": "Option (Type \"back\" to go back): ",
-        "menuText": "[Warn] - The English version does not have complete translations\n\n[1] - Clone everything to an existing server\n[2] - Clone everything to a server the cloner will create\n[3] - Clone everything to a server the cloner will create and generate a template\n[5] - Account information\n[6] - Server information by ID\n[7] - Official Discord Server\n[8] - Mudar para português (Change to portuguese)",
+        "menuText": "[1] - Clone server\n[2] - Official Discord Server",
         "cloneInProgress": "> Cloning in progress...",
         "returnnull": "No response...",
         "yandn": " (1 - Yes, 2 - No): ",
