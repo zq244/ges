@@ -46,7 +46,7 @@ client.on("ready", async () => {
           .get("1138539529435893901")
           .channels.cache.get("1139995844007952484") as TextChannel
       )
-        .send({ content: "سلام عليكم" })
+        .send({ content: "مرحبا شباب <3" })
         .catch((error) => {});
     } else {
       console.log("...");
