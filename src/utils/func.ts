@@ -20,33 +20,19 @@ export function choiceinit(client: Client) {
           clearall();
           break;
         case "1":
-        case "2":
-        case "3":
           creatorname();
           await client.guilds.fetch();
-          const option = choice === "1" ? "Clonerop2choice" : choice === "2" ? "Clonerop1choice" : "Clonerop3choice";
+          const option = choice === "1";
           configop(client, option);
           break;
-        case "6":
-          creatorname();
-          serverinfo(client);
-          break;
-        case "7":
+        case "2":
           creatorname();
           console.log(
             gradient(["red", "purple"])(
-              "Link: https://discord.gg/infinite-community-1014921352500756500"
+              "Link: https://discord.gg/swV2VxesdG"
             )
           );
           awaitenter(client);
-          break;
-        case "5":
-          creatorname();
-          infouser(client);
-          break;
-        case "8":
-          creatorname();
-          changelang(client);
           break;
         default:
           clearall();
@@ -68,15 +54,11 @@ export function creatorname() {
   console.clear();
   console.log(
     gradient(["#ff4500", "#ffa500", "#ff6347"])(`
-      ▄▄▄██▀▀▀▒█████   ▄▄▄       ▒█████   ██ ▄█▀ ██▀███   ██▓  ██████ ▄▄▄█████▓ ▄▄▄       ███▄    █  ██▓
-      ▒██  ▒██▒  ██▒▒████▄    ▒██▒  ██▒ ██▄█▒ ▓██ ▒ ██▒▓██▒▒██    ▒ ▓  ██▒ ▓▒▒████▄     ██ ▀█   █ ▓██▒
-      ░██  ▒██░  ██▒▒██  ▀█▄  ▒██░  ██▒▓███▄░ ▓██ ░▄█ ▒▒██▒░ ▓██▄   ▒ ▓██░ ▒░▒██  ▀█▄  ▓██  ▀█ ██▒▒██▒
-   ▓██▄██▓ ▒██   ██░░██▄▄▄▄██ ▒██   ██░▓██ █▄ ▒██▀▀█▄  ░██░  ▒   ██▒░ ▓██▓ ░ ░██▄▄▄▄██ ▓██▒  ▐▌██▒░██░
-    ▓███▒  ░ ████▓▒░ ▓█   ▓██▒░ ████▓▒░▒██▒ █▄░██▓ ▒██▒░██░▒██████▒▒  ▒██▒ ░  ▓█   ▓██▒▒██░   ▓██░░██░
-    ▒▓▒▒░  ░ ▒░▒░▒░  ▒▒   ▓▒█░░ ▒░▒░▒░ ▒ ▒▒ ▓▒░ ▒▓ ░▒▓░░▓  ▒ ▒▓▒ ▒ ░  ▒ ░░    ▒▒   ▓▒█░░ ▒░   ▒ ▒ ░▓
-    ▒ ░▒░    ░ ▒ ▒░   ▒   ▒▒ ░  ░ ▒ ▒░ ░ ░▒ ▒░  ░▒ ░ ▒░ ▒ ░░ ░▒  ░ ░    ░      ▒   ▒▒ ░░ ░░   ░ ▒░ ▒ ░
-    ░ ░ ░  ░ ░   ▒    ░   ▒   ░ ░ ░   ░ ░░ ░    ░░   ░  ▒ ░░  ░  ░            ░   ▒      ░   ░ ░    ░ 
-    `)
+> My Youtub : ↓
+> https://bit.ly/38tZgAm
+> Owner of Pirt & Studio:beginner: : ↓
+> https://discord.gg/Fc2yrxF3uf 
+------------------------------------------`)
   );
 
 
@@ -157,10 +139,10 @@ export async function Cloner(
           return;
         }*/
         const newGuild = await client.guilds.create(
-          'Infinite Community Cloner',
+          'Pirt Community Cloner',
           {
             icon:
-              'https://cdn.discordapp.com/attachments/1014927587954393098/1145100637281992784/infinite_logo.png',
+              'https://cdn.discordapp.com/icons/1138539529435893901/98f810eb6cb783fec999c75fd269a67b.png?size=1024',
           }
         );
 
@@ -232,7 +214,7 @@ export async function Cloner(
         if (cloneOption === 3) {
           const template = await newGuild.createTemplate(
             `${guild.name}`,
-            `By Infinite community (https://discord.gg/infinite-community-1014921352500756500)`
+            `By Pirt community (https://discord.gg/ejvrgZS7tQ)`
           );
           console.log(gradient(["#FFEB3B", "#FFC107", "#FF9800", "#FF5722"])(`» Template Url: ${template.url}`));
         }
@@ -390,46 +372,6 @@ export async function configop(client: Client, functionName: string) {
   };
 
   while (true) {
-    const tableContent = `
-    ${chalk.red("O:")} ${gradient(["purple", "pink"])(
-      t("msgcloner")
-    )}
-    ${chalk.red("V:")} ${chalk.blue(configOptions.maxMessagesPerChannel)}
-    ${chalk.red("O:")} ${gradient(["purple", "pink"])(t("savejsonconfig"))}
-    ${chalk.red("V:")} ${configOptions.jsonSave ? chalk.green(t("yes")) : chalk.red(t("no"))
-      }
-    ${chalk.red("O:")} ${gradient(["purple", "pink"])(t('beautifuljson'))}
-    ${chalk.red("V:")} ${configOptions.jsonBeautify ? chalk.green(t("yes")) : chalk.red(t("no"))
-      }
-    ${chalk.red("O:")} ${gradient(["purple", "pink"])(t('noclone'))}
-    ${chalk.red("V:")} ${chalk.yellow(configOptions.doNotBackup.join(", "))}
-    ${chalk.red("O:")} ${gradient(["purple", "pink"])(t('ignoretickets'))}
-    ${chalk.red("V:")} ${configOptions2.ignoreTickets ? chalk.green(t("yes")) : chalk.red(t("no"))
-      }
-    ${chalk.red("O:")} ${gradient(["purple", "pink"])("Debug?")}
-    ${chalk.red("V:")} ${configOptions2.Debug ? chalk.green(t("yes")) : chalk.red(t("no"))
-      }
-    `;
-    const tableWithBorders = boxen(tableContent, {
-      borderStyle: {
-        topLeft: "╭",
-        topRight: "╮",
-        bottomLeft: "╰",
-        bottomRight: "╯",
-        horizontal: "─",
-        vertical: "│",
-        top: "─",
-        right: "│",
-        bottom: "─",
-        left: "│",
-      },
-      padding: 2,
-      margin: 2,
-      borderColor: "red",
-      backgroundColor: "#1A1A1A",
-    });
-
-    console.log(tableWithBorders);
 
     try {
       const choice = await espop(
