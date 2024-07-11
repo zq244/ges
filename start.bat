@@ -3,6 +3,7 @@ setlocal
 
 set "nodejs_path="
 
+
 echo Tentando encontrar o Node.js
 timeout /nobreak /t 1 >nul
 
